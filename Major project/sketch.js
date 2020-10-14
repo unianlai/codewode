@@ -83,7 +83,7 @@ function draw(){
 function Particle(x,y,tx,ty){
     this.x =x ;
     this.y =y;
-    this.size = 5;
+    this.size = 8;
 
     var r = random(1)
     var signe = 1
@@ -145,7 +145,7 @@ var Parameters = function(){
 
     this.font = "./fonts/AvenirNextLTW01-Medium.woff"
     this.message = 'SPACE';
-    this.spacing = 6;
+    this.spacing = 10;
     this.size = 520;
 
     this.background = [0,0,0,150]; 
@@ -153,7 +153,7 @@ var Parameters = function(){
     this.strokeWeight = 0.5;
     this.threshold = 50;
     
-    this.xoffset = windowWidth/2 - this.size
+    this.xoffset = windowWidth/6 - this.size
     this.yoffset = windowHeight
 
     console.log(this.xoffset)
