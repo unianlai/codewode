@@ -152,8 +152,8 @@ var Parameters = function(){
     this.strokeWeight = 0.5;
     this.threshold = 50;
     
-    this.xoffset = windowWidth/9.9
-    this.yoffset = windowHeight*2/3
+    this.xoffset = windowWidth/9.7
+    this.yoffset = windowHeight*2/7
 
     console.log(this.xoffset)
     console.log(this.yoffset)
