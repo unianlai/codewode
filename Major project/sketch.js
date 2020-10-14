@@ -153,7 +153,7 @@ var Parameters = function(){
     this.threshold = 50;
     
     this.xoffset = windowWidth/6
-    this.yoffset = windowHeight*2/4.1
+    this.yoffset = windowHeight*2/3.9
 
     console.log(this.xoffset)
     console.log(this.yoffset)
