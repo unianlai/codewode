@@ -144,17 +144,17 @@ function Particle(x,y,tx,ty){
 var Parameters = function(){
 
     this.font = "./fonts/AvenirNextLTW01-Medium.woff"
-    this.message = 'SPACE';
+    this.message = 'space';
     this.spacing = 10;
-    this.size = 520;
+    this.size = 320;
 
     this.background = [0,0,0,150]; 
     this.color = [255,255,255];
     this.strokeWeight = 0.5;
     this.threshold = 50;
     
-    this.xoffset = windowWidth/6 - this.size
-    this.yoffset = windowHeight
+    this.xoffset = windowWidth - this.size
+    this.yoffset = windowHeight - this.size
 
     console.log(this.xoffset)
     console.log(this.yoffset)
