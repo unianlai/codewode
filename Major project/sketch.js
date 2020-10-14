@@ -9,7 +9,6 @@ var particles = [];
 
 function getPoints(){
     drawing = false;
-    // new font : I use rune which create by b2renger
     console.log(params.font);
     f = new Rune.Font(params.font) 
     particles = [];
