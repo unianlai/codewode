@@ -145,7 +145,7 @@ var Parameters = function(){
     this.font = "./fonts/CocosignumMaiuscoletto-Regular-Trial.woff"
     this.message = 'space';
     this.spacing = 11;
-    this.size = 350;
+    this.size = 380;
 
     this.background = [0,0,0,150]; 
     this.color = [255,255,255];
