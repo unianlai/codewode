@@ -1,7 +1,3 @@
-
-// update particles position on/off
-
-
 var f;
 var path;
 var polys;
@@ -13,7 +9,7 @@ var particles = [];
 
 function getPoints(){
     drawing = false;
-    // create new font : we use rune
+    // new font : I use rune which create by b2renger
     console.log(params.font);
     f = new Rune.Font(params.font) 
     particles = [];
@@ -30,7 +26,7 @@ function setup(){
     createCanvas(windowWidth,windowHeight)  
     background(0)
 
-    // init all parameters
+   
     params = new Parameters();
 }
 
@@ -103,8 +99,7 @@ function Particle(x,y,tx,ty){
     }
     this.yspeed = signe * random(0.15,1.5)
 
-    //this.xspeed = 0;
-    //this.yspeed = 0;    
+    
 
     this.xacc= 0;
     this.yacc =0;
@@ -149,7 +144,7 @@ function Particle(x,y,tx,ty){
 var Parameters = function(){
 
     this.font = "./fonts/AvenirNextLTW01-Medium.woff"
-    this.message = 'hello';
+    this.message = 'Space';
     this.spacing = 16;
     this.size = 834;
 
