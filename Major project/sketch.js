@@ -144,9 +144,9 @@ function Particle(x,y,tx,ty){
 var Parameters = function(){
 
     this.font = "./fonts/AvenirNextLTW01-Medium.woff"
-    this.message = 'space';
-    this.spacing = 15;
-    this.size = 400;
+    this.message = 'SPACE';
+    this.spacing = 6;
+    this.size = 520;
 
     this.background = [0,0,0,150]; 
     this.color = [255,255,255];
