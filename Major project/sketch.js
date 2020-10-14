@@ -146,7 +146,7 @@ var Parameters = function(){
     this.font = "./fonts/AvenirNextLTW01-Medium.woff"
     this.message = 'space';
     this.spacing = 10;
-    this.size = 320;
+    this.size = 310;
 
     this.background = [0,0,0,150]; 
     this.color = [255,255,255];
