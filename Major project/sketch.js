@@ -146,7 +146,7 @@ var Parameters = function(){
     this.font = "./fonts/AvenirNextLTW01-Medium.woff"
     this.message = 'space';
     this.spacing = 10;
-    this.size = 310;
+    this.size = 350;
 
     this.background = [0,0,0,150]; 
     this.color = [255,255,255];
@@ -154,7 +154,7 @@ var Parameters = function(){
     this.threshold = 50;
     
     this.xoffset = windowWidth - this.size
-    this.yoffset = windowHeight - this.size
+    this.yoffset = windowHeight/2 - this.size
 
     console.log(this.xoffset)
     console.log(this.yoffset)
