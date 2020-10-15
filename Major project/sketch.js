@@ -5,10 +5,14 @@ var drawing = false;
 var gui, params;
 var anchorX, anchorY;
 
+
 var particles = [];
+
+var song;
 
 function getPoints(){
     drawing = false;
+    // create new font : we use rune
     console.log(params.font);
     f = new Rune.Font(params.font) 
     particles = [];
@@ -20,12 +24,18 @@ function getPoints(){
     });
 }
 
+function preload(){
+  song = loadSound("Sounds/Space.mp3");
+}
+
 
 function setup(){
-    createCanvas(windowWidth,windowHeight)  
-    background(0)
+    createCanvas(windowWidth,windowHeight);  
+    background(0);
+    song.play();
+    
 
-   
+    // init all parameters
     params = new Parameters();
 }
 
@@ -64,25 +74,25 @@ function draw(){
     }
 
     if(mouseIsPressed && mouseX < windowWidth-300)  
-	{
-		if(!isStart)
-		{
-			getPoints();
-			isStart = true;
-		}
-		particles.push(new Particle(mouseX,mouseY,mouseX,mouseY));
-		particles.push(new Particle(mouseX,mouseY,mouseX,mouseY));
-		particles.push(new Particle(mouseX,mouseY,mouseX,mouseY));
-		particles.push(new Particle(mouseX,mouseY,mouseX,mouseY));
+  {
+    if(!isStart)
+    {
+      getPoints();
+      isStart = true;
+    }
+    particles.push(new Particle(mouseX,mouseY,mouseX,mouseY));
+    particles.push(new Particle(mouseX,mouseY,mouseX,mouseY));
+    particles.push(new Particle(mouseX,mouseY,mouseX,mouseY));
+    particles.push(new Particle(mouseX,mouseY,mouseX,mouseY));
 
-	}
+  }
 }
 
 
 function Particle(x,y,tx,ty){
     this.x =x ;
     this.y =y;
-    this.size = 8;
+    this.size = 5;
 
     var r = random(1)
     var signe = 1
@@ -98,7 +108,8 @@ function Particle(x,y,tx,ty){
     }
     this.yspeed = signe * random(0.15,1.5)
 
-    
+    //this.xspeed = 0;
+    //this.yspeed = 0;    
 
     this.xacc= 0;
     this.yacc =0;
@@ -144,16 +155,16 @@ var Parameters = function(){
 
     this.font = "./fonts/CocosignumMaiuscoletto-Regular-Trial.woff"
     this.message = 'space';
-    this.spacing = 11;
-    this.size = 380;
+    this.spacing = 8;
+    this.size = 600;
 
     this.background = [0,0,0,150]; 
     this.color = [255,255,255];
-    this.strokeWeight = 0.5;
-    this.threshold = 50;
+    this.strokeWeight = 0.51;
+    this.threshold = 60;
     
-    this.xoffset = windowWidth/6
-    this.yoffset = windowHeight*2/3.9
+    this.xoffset = windowWidth/2.5 - this.size
+    this.yoffset = windowHeight*2/3
 
     console.log(this.xoffset)
     console.log(this.yoffset)
