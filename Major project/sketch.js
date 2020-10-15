@@ -25,7 +25,7 @@ function getPoints(){
 }
 
 function preload(){
-  song = loadSound("data/Space1.mp3");
+  song = loadSound("data/space1.mp3");
 }
 
 
