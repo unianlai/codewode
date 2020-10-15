@@ -154,7 +154,7 @@ function Particle(x,y,tx,ty){
 var Parameters = function(){
 
     this.font = "./fonts/CocosignumMaiuscoletto-Regular-Trial.woff"
-    this.message = 'space';
+    this.message = 'spaces';
     this.spacing = 8;
     this.size = 600;
 
