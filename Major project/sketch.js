@@ -12,11 +12,11 @@ var song;
 
 function getPoints(){
     drawing = false;
-    // create new font : we use rune
+    
     console.log(params.font);
     f = new Rune.Font(params.font) 
     particles = [];
-    // load the font
+    
     f.load(function(err){       
         path = f.toPath(params.message, 0, 0, params.size)
         polys = path.toPolygons({ spacing:params.spacing })
@@ -25,7 +25,7 @@ function getPoints(){
 }
 
 function preload(){
-  song = loadSound("Space1.mp3");
+  song = loadSound("data/Space1.mp3");
 }
 
 
@@ -35,7 +35,7 @@ function setup(){
     song.play();
     
 
-    // init all parameters
+    
     params = new Parameters();
 }
 
