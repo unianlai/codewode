@@ -7,6 +7,8 @@ var anchorX, anchorY;
 
 var particles = [];
 
+var song;
+
 function getPoints(){
     drawing = false;
     console.log(params.font);
@@ -20,10 +22,15 @@ function getPoints(){
     });
 }
 
+function preload(){
+song=loadSound("data/space.mp3");
+}
 
 function setup(){
-    createCanvas(windowWidth,windowHeight)  
-    background(0)
+    createCanvas(windowWidth,windowHeight); 
+    background(0);
+	
+	song.loop();
 
    
     params = new Parameters();
@@ -34,7 +41,7 @@ var isStart = false;
 function draw(){
     noStroke();
     fill(params.background)
-    rect(0,0,windowWidth,windowHeight)
+    rect(0,0,windowWidth,windowHeight);
 
    if (drawing){
 
@@ -95,8 +102,9 @@ function Particle(x,y,tx,ty){
     signe = 1
     if(r < 0.5){
         signe = -1
-    }
-    this.yspeed = signe * random(0.15,1.5)
+    };
+	
+    this.yspeed = signe * random(0.15,1.5);
 
     
 
