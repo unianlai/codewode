@@ -7,7 +7,6 @@ var anchorX, anchorY;
 
 var particles = [];
 
-var song;
 
 function getPoints(){
     drawing = false;
@@ -22,17 +21,13 @@ function getPoints(){
     });
 }
 
-function preload(){
-song=loadSound("data/space.mp3");
-}
+
 
 function setup(){
     createCanvas(windowWidth,windowHeight); 
     background(0);
-	
-	song.loop();
 
-   
+
     params = new Parameters();
 }
 
